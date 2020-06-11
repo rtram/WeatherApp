@@ -1,0 +1,10 @@
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h3>{{ convertToDate({ date: weatherDay.dt }) | date: dateFormat }}</h3>
+        </div>
+    </div>
+    <div class="panel-body">
+        Temperature {{ convertToStandard({ kelvin: weatherDay.main.temp }) }}
+    </div>
+</div>
