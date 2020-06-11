@@ -19,8 +19,9 @@ app.directive('articleCard', function () {
         replace: true,
         scope: {
             imgUrl: "@",
-            articleName: "@",
-            articleUrl: "@"
+            title: "@",
+            url: "@",
+            description: "@"
         }
     }
 })
