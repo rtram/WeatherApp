@@ -1,20 +1,23 @@
-<a href="{{ url }}" target="_blank">
-    <div class="panel panel-default" >
-        <div class="panel-heading">
-            <div class="panel-title">
-                <h3>{{ newsSource }}</h3>
-                <img ng-src="{{ imgUrl }}">
-                <h4>{{ title }}</h4>
-            </div>
+
+        <div class="col-md-4">
+            <a href="{{ url }}" target="_blank">
+                <div class="panel panel-default" >
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h3>{{ newsSource }}</h3>
+                            <img ng-src="{{ imgUrl }}">
+                            <h4>{{ title }}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        Tags
+                        <span ng-repeat="topic in topics">
+                            {{ topic.name }}
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{ description }}</p>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div>
-            Tags
-            <span ng-repeat="topic in topics">
-                {{ topic.name }}
-            </span>
-        </div>
-        <div class="panel-body">
-            <p>{{ description }}</p>
-        </div>
-    </div>
-</a>
