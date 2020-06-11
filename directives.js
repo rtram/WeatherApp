@@ -18,7 +18,9 @@ app.directive('articleCard', function () {
         templateUrl: 'directives/articleCard.html',
         replace: true,
         scope: {
-            imgUrl: "@"
+            imgUrl: "@",
+            articleName: "@",
+            articleUrl: "@"
         }
     }
 })

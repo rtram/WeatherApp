@@ -16,7 +16,7 @@
             <div ng-repeat="article in articles">
                 <div class="row">
                     <div class="col-md-12">        
-                        <article-card img-url="{{ article.image.thumbnail.contentUrl }}"></article-card>
+                        <article-card img-url="{{ article.image.thumbnail.contentUrl }}" article-name="{{ article.name }}" article-url="{{ article.url }}"></article-card>
                     </div>
                 </div>
             </div>
