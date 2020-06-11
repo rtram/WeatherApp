@@ -14,7 +14,7 @@ app.controller('homeController', ['$scope', '$log', '$location', 'cityService', 
     
 }])
 
-app.controller('forecastController', ['$scope', '$log', '$http', '$routeParams', '$q', 'cityService', 'weatherService', function ($scope, $log, $http, $routeParams,$q, cityService, weatherService) {
+app.controller('forecastController', ['$scope', '$log', '$routeParams', '$q', 'cityService', 'weatherService', function ($scope, $log, $routeParams,$q, cityService, weatherService) {
 
     $scope.city = cityService.city
     $scope.days = $routeParams.days || '2'
@@ -30,6 +30,17 @@ app.controller('forecastController', ['$scope', '$log', '$http', '$routeParams',
     weatherService.getWeather($scope.city, $scope.days)
         .then(function (response) {
             $scope.forecasts = response.data.list
+        })
+
+}])
+
+app.controller('newsController', ['$scope', '$log', 'newsService', function ($scope, $log, newsService) {
+
+    $scope.name = 'newController'
+
+    newsService.getNews()
+        .then(function (response) {
+            $log.log(response)
         })
 
 }])
