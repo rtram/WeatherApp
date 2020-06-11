@@ -11,3 +11,14 @@ app.directive('weatherReport', function () {
         }
     }
 })
+
+app.directive('articleCard', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'directives/articleCard.html',
+        replace: true,
+        scope: {
+            imgUrl: "@"
+        }
+    }
+})

@@ -36,11 +36,12 @@ app.controller('forecastController', ['$scope', '$log', '$routeParams', '$q', 'c
 
 app.controller('newsController', ['$scope', '$log', 'newsService', function ($scope, $log, newsService) {
 
-    $scope.name = 'newController'
+    $scope.name = 'newsController'
 
     newsService.getNews()
         .then(function (response) {
-            $log.log(response)
+            $scope.articles = response.data.value
+            $log.log($scope.articles)
         })
 
 }])
