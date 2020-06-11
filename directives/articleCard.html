@@ -7,6 +7,12 @@
                 <h4>{{ title }}</h4>
             </div>
         </div>
+        <div>
+            Tags
+            <span ng-repeat="topic in topics">
+                {{ topic.name }}
+            </span>
+        </div>
         <div class="panel-body">
             <p>{{ description }}</p>
         </div>

@@ -22,7 +22,8 @@ app.directive('articleCard', function () {
             title: "@",
             url: "@",
             description: "@",
-            newsSource: "@"
+            newsSource: "@",
+            topics: "="
         }
     }
 })
