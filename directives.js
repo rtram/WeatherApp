@@ -21,7 +21,8 @@ app.directive('articleCard', function () {
             imgUrl: "@",
             title: "@",
             url: "@",
-            description: "@"
+            description: "@",
+            newsSource: "@"
         }
     }
 })
